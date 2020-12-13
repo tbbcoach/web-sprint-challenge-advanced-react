@@ -24,6 +24,12 @@ export default class PlantList extends Component {
       .catch((err) => console.log('error', err));
       }
 
+  componentDidUpdate(prevState, prevProps) {
+    if (prevState.plants !== this.state.plants) {
+      console.log("plants have changed!");
+    }
+  }
+  
   /*********  DON'T CHANGE ANYTHING IN THE RENDER FUNCTION *********/
   render() {
     return (
